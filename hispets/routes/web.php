@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Auth::routes();
-Route::view('/{path?}','front');
+Route::view('/{path?}','front')->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('animalss',AnimalsController::class);
