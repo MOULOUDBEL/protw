@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnimalsController;
+use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('front');
-// });
+ Route::get('/', function () {
+     return view('welcome');
+});
 
 Auth::routes();
 Route::view('/{path?}','front')->middleware('auth');

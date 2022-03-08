@@ -6,47 +6,35 @@ import Home from './pages/Home';
 import Birds from './pages/Birds';
 import Food from './pages/Food';
 import Animals from './pages/Animals';
+import React from 'react';
 
-function Ap() {
-  var tab=[
-    {
-    "nom" : "Tom",
-    "espece" : "Chat",
-    "age" : 2,
-      "descr" : "un chat hyper gentil", 
-      "image" :"/Chats-mignons.jpg",
-      "liked":"false"
-      },
-{
-"nom" : "Greta",
-"espece" : "chien",
-"age" : 5,
-"descr" :"une chienne adorable pour les enfants",
-"image" :"/chien.jpg",
-"liked":"false"
-},
-{
-"nom" : "Brandon",
-"espece" : "chien",
-"age" : 10,
-"descr" :"Ce bulldog est fait pour les grands amateurs",
-"image" : "/Brandon.jpg",
-"liked":"false"
-}
-  ]
+class Ap extends React.Component  {
+  state = {
 
+    chevwis: []
+  }
+
+  componentDidMount(){
+      axios.get('http://127.0.0.1:8000/animals')
+      .then(res => {
+          const chevwis = res.data;
+          this.setState({chevwis});
+      })
+  }
+
+render(){
   return (
     <div className="App">
-     
-      
+
+
       <BrowserRouter>
-      <Navigation></Navigation>  
-    
+      <Navigation></Navigation>
+
     <Routes>
-    
+
 
     <Route path='/Home' element={<Home/>} />
-    <Route path='/animals' element={<Animals myAnimals={tab} name='jj'/>} />
+    <Route path='/animals' element={<Animals myAnimals={this.state.chevwis} />} />
     <Route
               path='/Birds'
               element={<Birds />}
@@ -56,9 +44,10 @@ function Ap() {
 
     </Routes>
   </BrowserRouter>
-     
+
     </div>
   );
+}
 }
 
 export default Ap;

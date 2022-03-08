@@ -1,28 +1,29 @@
 // import React from 'react'
-import React, {Component} from "react";
+import React from "react";
 
-class Animal extends Component{
+class Animal extends React.Component{
   state={
-    likes : this.props.fils.liked
+    likes : false
 
   }
-  handelLike = () =>{
+  changebutton = () =>{
     this.setState(
       {likes : !this.state.likes}
     )
   }
-  render(){
+
+  render(){const dist=this.props.fils
     return(
       <div className="animal-list">
-       <div class="col">
+       <div className="col">
         <div className="card" style={{width: "18rem"}}>
-        <img src={this.props.fils.image} className="card-img-top" alt={this.props.fils.nom}/>
+        <img src={dist.image} className="card-img-top" alt={dist.nom}/>
         <div className="card-body">
-        <h5 className="card-nom">Nom : {this.props.fils.nom}</h5>
-         <p className="card-desc">Description : {this.props.fils.descr}</p>
-         <p className="card-age">Age : {this.props.fils.age} ans</p>
-         <p className="card-esc">Espece : {this.props.fils.espece}</p>
-         <a href="#" className={this.state.likes ? "btn btn-danger" :"btn btn-primary"} onClick={()=>this.handelLike()}>
+        <h5 className="card-nom">Nom : {dist.nom}</h5>
+         <p className="card-desc">Description : {dist.descr}</p>
+         <p className="card-age">Age : {dist.age} ans</p>
+         <p className="card-esc">Espece : {dist.espece}</p>
+         <a href="#" className={this.state.likes ? "btn btn-danger" :"btn btn-primary"} onClick={()=>this.changebutton()}>
          {this.state.likes ? "j'aime": "je n'aime pas "}
          </a>
 
@@ -44,22 +45,22 @@ export default Animal;
 
 // function Animal(props) {
 //   const  m=props.animal;
-  
+
 //     //   const likes=m.liked
 //       const [likes, setLikes] = useState(m.liked.false);
-  
+
 
 //       function handelLike(){
 //         setLikes(!likes);
-        
+
 //     }
 //     return (
 //         <div>
 //              <div className='animal-list'>
 //              <div class="col">
-       
-        
-        
+
+
+
 
 //         <div className="card" style={{width: "18rem"}}>
 //   <img src={m.image} className="card-img-top" alt={m.nom}/>
@@ -75,9 +76,9 @@ export default Animal;
 // </div>
 
 
-            
+
 //     </div>
-            
+
 //         </div>
 //         </div>
 //     )
