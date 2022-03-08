@@ -5285,21 +5285,21 @@ function Ap() {
     "espece": "Chat",
     "age": 2,
     "descr": "un chat hyper gentil",
-    "image": "Chats-mignons.jpg",
+    "image": "/Chats-mignons.jpg",
     "liked": "false"
   }, {
     "nom": "Greta",
     "espece": "chien",
     "age": 5,
     "descr": "une chienne adorable pour les enfants",
-    "image": "/Greta.jpg",
+    "image": "/chien.jpg",
     "liked": "false"
   }, {
     "nom": "Brandon",
     "espece": "chien",
     "age": 10,
     "descr": "Ce bulldog est fait pour les grands amateurs",
-    "image": "Brandon.jpg",
+    "image": "/Brandon.jpg",
     "liked": "false"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
@@ -5572,7 +5572,7 @@ var Animal = /*#__PURE__*/function (_Component) {
                 onClick: function onClick() {
                   return _this2.handelLike();
                 },
-                children: this.state.likes ? "j'aime" : "je deteste"
+                children: this.state.likes ? "j'aime" : "je n'aime pas "
               })]
             })]
           })
@@ -5746,16 +5746,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      children: "yahia"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
       type: "button",
       "class": "btn btn-primary",
-      children: "Primary"
-    })]
+      children: "essai"
+    })
   });
 }
 

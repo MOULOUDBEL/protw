@@ -23,7 +23,7 @@ class Animal extends Component{
          <p className="card-age">Age : {this.props.fils.age} ans</p>
          <p className="card-esc">Espece : {this.props.fils.espece}</p>
          <a href="#" className={this.state.likes ? "btn btn-danger" :"btn btn-primary"} onClick={()=>this.handelLike()}>
-         {this.state.likes ? "j'aime": "je deteste"}
+         {this.state.likes ? "j'aime": "je n'aime pas "}
          </a>
 
         </div>

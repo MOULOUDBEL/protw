@@ -4,10 +4,8 @@ import React from 'react'
 function Home() {
     return (
         <div>
-           <h1>
-           yahia
-           </h1>
-           <button type="button" class="btn btn-primary">Primary</button>   
+         
+           <button type="button" class="btn btn-primary">essai</button>   
         </div>
     )
 }
