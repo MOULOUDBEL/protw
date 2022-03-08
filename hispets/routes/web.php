@@ -23,3 +23,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('animalss',AnimalsController::class);
+//Route::get('/apres',[AnimalsController::class,'index']);
